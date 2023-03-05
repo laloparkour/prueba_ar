@@ -14,14 +14,28 @@
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
         >
+                <a-camera gps-new-camera='gpsMinDistance: 5' rotation-reader></a-camera>
+                
                 <a-image
                     src="assets/asset.jpeg"
                     look-at="[gps-camera]"
-                    scale="50 50 50"
-                    gps-entity-place="latitude: 24.080084; longitude: -110.312212;"
+                    scale="5 5 5"
+                    gps-new-entity-place="latitude: 24.080084; longitude: -110.312212;"
                 ></a-image>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+                <a-text
+                    value="PRUEBA DE TEXTO"
+                    scale="5 50 5"
+                    gps-new-entity-place="latitude: 24.079763; longitude: -110.312448;"
+                ></a-text>
+
+                <a-entity 
+                    material='color: red' 
+                    geometry='primitive: box'
+                    gps-new-entity-place="latitude: 24.079877; longitude: -110.312450;" 
+                    scale="10 10 10"
+                ></a-entity>
+
         </a-scene>
     </body>
 </html>
